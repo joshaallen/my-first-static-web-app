@@ -1,0 +1,153 @@
+*, ::after, ::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+  font-size: 62.5%;
+}
+
+body {
+  width: 100%;
+  min-height: 100%;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul, ol, li {
+  list-style-type: none;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(10px, 1fr));
+  grid-template-rows: repeat(5, auto);
+}
+
+.system_container {
+  grid-column: 1/13;
+  justify-self: center;
+  width: 80%;
+  display: flex;
+  max-width: 102.4rem;
+}
+
+.proton_container, .left_arrow_container {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.electron_container, .right_arrow_container {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.left_particle_container, .right_particle_container {
+  flex: 1 1 auto;
+}
+
+.left_arrow, .right_arrow {
+  width: 50%;
+}
+
+.right_arrow_container::after, .left_arrow_container::before {
+  content: "Force";
+}
+
+.electron_container > .electron {
+  display: block;
+  width: 30%;
+  height: 30%;
+  transition: transform 5s;
+  transition-timing-function: ease;
+}
+
+.proton_container > .proton {
+  display: block;
+  width: 30%;
+  height: 30%;
+  position: relative;
+}
+
+.unknown_distance_container {
+  grid-column: 1/13;
+  justify-self: center;
+  align-self: start;
+  width: 80%;
+  justify-content: center;
+  margin-bottom: 2rem;
+  display: none;
+}
+
+#simulation_form_container {
+  grid-column: 1/13;
+  justify-self: center;
+  margin-bottom: 2rem;
+}
+
+#simulation_form > #bgn_simulation, #solution_form > #submit_btn {
+  padding: 1rem;
+  font: bold 1.9rem sans-serif;
+  border: none;
+  border-radius: 1.2rem;
+  background-color: #0000ff;
+  cursor: pointer;
+  color: #ffffff;
+  outline: none;
+}
+
+fieldset {
+  border: none;
+}
+
+.problem_container {
+  grid-column: 1/13;
+  justify-self: center;
+  width: 80%;
+}
+
+.problem_container > .problem, .problem_container > .given {
+  border: 0.1rem solid #000000;
+  border-radius: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+#solution_form {
+  width: 25rem;
+}
+
+input[type=text] {
+  padding: 1.2rem;
+  border: 0.1rem solid #ccc;
+  border-radius: 0.4rem;
+  margin-bottom: 1rem;
+}
+
+.solution_text_container::after {
+  display: inline;
+  content: "cm.";
+}
+
+.correct, .incorrect {
+  display: none;
+}
+
+.correct {
+  color: #00ff00;
+  font-weight: bold;
+}
+
+.incorrect {
+  color: #ff0000;
+  font-weight: bold;
+}
+
+body {
+  font: 1.8rem/1.5 "Comic Sans MS", cursive;
+}
+
+/*# sourceMappingURL=coloumb.css.map */

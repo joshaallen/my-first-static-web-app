@@ -1,17 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="styles.css">
-  <title>Vanilla JavaScript App</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/coloumb.css">
+    <title>Document</title>
 </head>
-
 <body>
-  <main>
-    <h1>Vanilla JavaScript App</h1>
-  </main>
+    <body class="container">
+        <div class="system_container">
+            <div class="left_particle_container">
+                <div class="right_arrow_container">
+                    <img class="right_arrow" src="graphics/force_right_arrow-100w.png" alt="Force acted on from the right" height="35" width="100">
+                </div>
+                <div class="electron_container">
+                    <img class="electron" src="graphics/electron-400w.png" alt="electron" height="400" width="400">
+                </div>
+            </div><!--end of left particle container-->
+           <div class="right_particle_container">
+                <div class="left_arrow_container">
+                    <img class="left_arrow" src="graphics/force_left_arrow-100w.png" alt="Force acted on from the left" height="35" width="100">
+                </div>
+                <div class="proton_container">
+                    <img class="proton" src="graphics/proton-400w.png" alt="proton" height="400" width="400">
+                </div>
+           </div><!--end of right particle container-->
+        </div><!--end of system container-->
+        <div class = unknown_distance_container>
+            <p class = unknown_distance>
+                Distance = <span class = unkown>?</span>
+            </p>
+        </div><!--end of unknown distance container-->
+        <fieldset id="simulation_form_container">
+            <form id="simulation_form">
+                <input id="bgn_simulation" type="button" value="Begin Simultion">
+                <script src="js/coloumb.js"></script>
+            </form>
+        </fieldset><!--end of form container-->
+        <div class="problem_container">
+            <div class="problem">
+                <p><strong>Problem:</strong></p>
+            <p>Two point charges, a electron = -75nC and a proton = 25nC are sepearated by an uknown distance d = ?. The force the proton exerts on the electron is 0.019 N and the force the electron exerts on the proton is 0.019 N. Find the distance that the two charges are seperate by in cm.</p>
+            </div><!--end of problem-->
+            <div class="given">
+                <p>Given:</p>
+            <p>F ext on proton = 0.019 N</p>
+            <p>F ext on electron = 0.019 N</p>
+            <p>proton = -75nC</p>
+            <p>electron = 25nC</p>
+            <p>proportionality constant k = 9.0 x 10<sup>9</sup>N x m<sup>2</sup>/C<sup>2</sup></p>
+            <p>
+                F = k x |q<sub>1</sub> x q<sub>2</sub>| &divide; r<sup>2</sup>
+            </p>
+            </div><!--end of given-->
+        </div><!--end of problem container-->
+        <fieldset id="solution_form_container">
+            <form id="solution_form">
+                <label for="solution">Solution:</label>
+                <div class="solution_text_container">
+                    <input id="solution" type="text" name="solution" placeholder="Enter Solution">
+                </div>
+                <span class="correct">Correct</span><span class="incorrect">Incorrect</span>
+                <input id="submit_btn" type="button" value="Submit">
+                <script src="js/solution.js"></script>
+            </form>
+        </fieldset><!--end of solution form container-->
+    </div><!--end of container-->
 </body>
-
 </html>
